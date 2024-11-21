@@ -1,0 +1,34 @@
+-- Create the database
+CREATE DATABASE mydb;
+
+-- Use the database
+USE mydb;
+
+-- Create the 'lib' table (Books Table)
+CREATE TABLE lib (
+    Name VARCHAR(100) NOT NULL,  -- Book Name
+    Quantity INT NOT NULL        -- Number of copies available
+);
+
+-- Create the 'student' table
+CREATE TABLE student (
+    Id VARCHAR(50) PRIMARY KEY   -- Unique Student ID
+);
+
+-- Insert sample books
+INSERT INTO lib (Name, Quantity) VALUES 
+('C++ Primer', 5),
+('MySQL Guide', 3),
+('Data Structures', 7);
+
+-- Insert sample students
+INSERT INTO student (Id) VALUES 
+('S1'),
+('S2'),
+('S3');
+
+-- Query to check available books
+SELECT * FROM lib;
+
+-- Query to check registered students
+SELECT * FROM student;
